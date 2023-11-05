@@ -18,18 +18,19 @@ function checkGrade() {
     } else {
         displayResult("Invalid input. Please enter a value between 0 and 100.");
     }
-    }
+}
 
-    function displayResult(grade) {
+function displayResult(grade) {
     // Get the result element
     var resultElement = document.getElementById("result");
     // Set the grade result text
     resultElement.textContent = "Grade: " + grade;
-    }
+}
 
-
+// Get the input field
 var percentageInput = document.getElementById('percentage');
 
+// Add an event listener for the "keydown" event on the input field
 percentageInput.addEventListener('keydown', function(event) {
     // Check if the pressed key is "Enter" (key code 13)
     if (event.keyCode === 13) {
@@ -37,5 +38,5 @@ percentageInput.addEventListener('keydown', function(event) {
         event.preventDefault();
         // Call the checkGrade function if "Enter" key is pressed
         checkGrade();
-}
+    }
 });
